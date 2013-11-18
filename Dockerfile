@@ -10,7 +10,7 @@ ADD . /opt/apps/libredocker
 ADD .docker/supervisor.conf /opt/supervisor.conf
 ADD .docker/run.sh /usr/local/bin/run
 RUN cd /opt/apps/
-RUN git clone git@github.com:yencarnacion/libre.git
+RUN git clone https://github.com/yencarnacion/libre.git
 RUN cd libre
 RUN git checkout update_admin_user
 RUN /opt/ve/libredocker/bin/pip install -r /opt/apps/libre/libre/requirements.txt
