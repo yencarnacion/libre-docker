@@ -9,9 +9,7 @@ RUN virtualenv --no-site-packages /opt/ve/libredocker
 ADD . /opt/apps/libredocker
 ADD .docker/supervisor.conf /opt/supervisor.conf
 ADD .docker/run.sh /usr/local/bin/run
-RUN cd /opt/apps/
-RUN git clone -b update_admin_user https://github.com/yencarnacion/libre.git
-RUN cd libre
+RUN (cd /opt/apps/ && git clone -b update_admin_user https://github.com/yencarnacion/libre.git)
 RUN /opt/ve/libredocker/bin/pip install -r /opt/apps/libre/libre/requirements.txt
 RUN (cd /opt/apps/libre && /opt/ve/libredocker/bin/python manage.py syncdb --noinput)
 RUN (cd /opt/apps/libre && /opt/ve/libredocker/bin/python manage.py migrate)
