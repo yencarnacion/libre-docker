@@ -1,7 +1,7 @@
 FROM ubuntu:12.10
 MAINTAINER Yamir Encarnacion "yencarnacion@webninjapr.com"
 RUN apt-get -qq update
-RUN apt-get install -y python-dev python-setuptools supervisor git-core libgdal
+RUN apt-get install -y python-dev python-setuptools supervisor git-core libgdal-dev 
 RUN easy_install pip
 RUN pip install virtualenv
 RUN pip install uwsgi
