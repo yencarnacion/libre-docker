@@ -16,7 +16,7 @@ With a tag for easier reuse
 
 Running the container
 
-    $ sudo docker run -d -p :8000 <your username>/libre-docker
+    $ sudo docker run -d -p 8000:8000 <your username>/libre-docker
 
 Now go to `<your ip>:8000` in your browser
 
