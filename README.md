@@ -19,3 +19,5 @@ Running the container
     $ sudo docker run -d -p :8000 <your username>/libre-docker
 
 Now go to `<your ip>:8000` in your browser
+
+Admin Username: admin | Admin Password: libre
