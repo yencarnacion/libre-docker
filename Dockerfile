@@ -14,6 +14,7 @@ RUN /opt/ve/libredocker/bin/pip install -r /opt/apps/libre/libre/requirements.tx
 RUN (cd /opt/apps/libre && /opt/ve/libredocker/bin/python manage.py syncdb --noinput)
 RUN (cd /opt/apps/libre && /opt/ve/libredocker/bin/python manage.py migrate)
 RUN (cd /opt/apps/libre && /opt/ve/libredocker/bin/python manage.py update_admin_user --username=admin --password=libre)
-RUN (cd /opt/apps/libre/ && /opt/ve/libredocker/bin/python manage.py collectstatic --noinput)
+ADD .docker/settings_local.py /opt/apps/libre/settings_local.py
+#RUN (cd /opt/apps/libre/ && /opt/ve/libredocker/bin/python manage.py collectstatic --noinput)
 EXPOSE 8000
 CMD ["/bin/sh", "-e", "/usr/local/bin/run"]
