@@ -1,7 +1,7 @@
 libre-docker
 =============
 
-Demo of `LIBRE App <https://github.com/commonwealth-of-puerto-rico/libre` using Docker
+Demo of `LIBRE App <https://github.com/commonwealth-of-puerto-rico/libre`_using_`Docker <https://www.docker.io/>`
 
 
 Dockerfile
