@@ -1,7 +1,7 @@
 libre-docker
 =============
 
-Demo of LIBRE App using Docker
+Demo of `LIBRE App <https://github.com/commonwealth-of-puerto-rico/libre` using Docker
 
 
 Dockerfile
@@ -20,4 +20,5 @@ Running the container
 
 Now go to `<your ip>:8000` in your browser
 
-Admin Username: admin | Admin Password: libre
+The default username and password for the Docker image are:
+Username: **admin** | Password: **libre**
